@@ -5,9 +5,10 @@ repo=$2
 repoUrl=https://api.github.com/repos/$1/$2/releases/latest
 zipUrl=$(curl -s $repoUrl | grep zipball_url | cut -d '"' -f 4)
 
-echo "Repo Url: " $repoUrl
-echo "Zip Url: " $zipUrl
+#echo "Repo Url: " $repoUrl
+#echo "Zip Url: " $zipUrl
 
-curl -s -L "$zipUrl" > $userName_$repo.zip 
+zipName="$userName--$repo"
+curl -s -L "$zipUrl" > $zipName.zip 
 
-echo "done"
+echo "Downloaded File: " $zipName.zip
