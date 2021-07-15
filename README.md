@@ -9,6 +9,6 @@ sh {fileName} {userName} {repoName}
 For this repo: https://github.com/FortAwesome/react-fontawesome
 
 Ex: 
-  sh getLatestGitRelease.sh FortAwesome react-fontawesome
+  > sh getLatestGitRelease.sh FortAwesome react-fontawesome
   
 The above command will download the zip file in your working directory
